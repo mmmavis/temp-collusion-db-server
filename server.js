@@ -45,7 +45,7 @@ app.post("/donateData", function(req, res){
   console.log(req.body);
   
   var jsonObj = req.body;
-  if ( jsonObj.format == "CollusionSaveFile" && jsonObj.version == "1.0" ){ // check format and version
+  if ( jsonObj.format === "Collusion Save File" && jsonObj.version === "1.0" ){ // check format and version
     var connections = jsonObj.connections;
     var client = new pg.Client(process.env.DATABASE_URL);
     client.connect(function(err) {
