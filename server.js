@@ -64,7 +64,7 @@ app.post("/donateData", function(req, res){
       });
     }
   }else{
-    res.send("Sorry. Format/version not supported.");
+    res.send("Sorry. Format/version " + jsonObj.format + "/" + jsonObj.version + " not supported.");
   }
 });
 
